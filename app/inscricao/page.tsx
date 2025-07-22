@@ -61,7 +61,7 @@ export default function InscricaoPage() {
       id: "ensino-medio",
       title: "Recém-Formados do Ensino Médio",
       description: "Para quem terminou o ensino médio e quer ingressar na universidade",
-      requirements: "Média ≥ 18 valores • Certificado de conclusão",
+      requirements: "Média ≥ 16 valores • Certificado de conclusão",
       icon: <GraduationCap className="h-6 w-6" />,
       color: "bg-emerald-500",
     },
@@ -69,7 +69,7 @@ export default function InscricaoPage() {
       id: "universitario",
       title: "Universitários em Curso",
       description: "Para estudantes já matriculados no ensino superior",
-      requirements: "Média ≥ 18 valores • Declaração de matrícula",
+      requirements: "Média ≥ 16 valores • Declaração de matrícula",
       icon: <BookOpen className="h-6 w-6" />,
       color: "bg-green-500",
     },
@@ -77,7 +77,7 @@ export default function InscricaoPage() {
       id: "tecnico",
       title: "Cursos Técnicos Superiores",
       description: "Para cursos técnicos e profissionalizantes",
-      requirements: "Média ≥ 18 valores • Comprovativo de inscrição",
+      requirements: "Média ≥ 16 valores • Comprovativo de inscrição",
       icon: <Target className="h-6 w-6" />,
       color: "bg-orange-500",
     },
@@ -85,7 +85,7 @@ export default function InscricaoPage() {
       id: "pos-graduacao",
       title: "Pós-Graduação e Mestrado",
       description: "Para estudantes de pós-graduação e mestrado",
-      requirements: "Licenciatura concluída • Média ≥ 18 valores",
+      requirements: "Licenciatura concluída • Média ≥ 16 valores",
       icon: <Award className="h-6 w-6" />,
       color: "bg-purple-500",
     },
@@ -126,7 +126,7 @@ export default function InscricaoPage() {
 
     // Validar média mínima
     const media = Number.parseFloat(formData.mediaFinal)
-    if (isNaN(media) || media < 18) {
+    if (isNaN(media) || media < 16) {
       return false
     }
 
@@ -395,10 +395,10 @@ export default function InscricaoPage() {
                       value={formData.mediaFinal}
                       onChange={(e) => handleInputChange("mediaFinal", e.target.value)}
                       className="bg-white/10 border-white/20 text-white placeholder:text-gray-400"
-                      placeholder="18.5"
+                      placeholder="16.5"
                       required
                     />
-                    <p className="text-gray-400 text-sm">Mínimo: 18 valores</p>
+                    <p className="text-gray-400 text-sm">Mínimo: 16 valores</p>
                   </div>
                 </div>
 
